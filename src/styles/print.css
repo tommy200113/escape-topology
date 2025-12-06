@@ -1,0 +1,145 @@
+/**
+ * Print Styles for Escape Topology
+ * 
+ * These styles are applied when printing the evacuation plan.
+ * They ensure a clean, readable output on paper.
+ */
+
+ @media print {
+    /* Reset page */
+    * {
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+  
+    /* Hide non-printable elements */
+    .no-print,
+    .app-header,
+    .app-footer,
+    .step-header,
+    .step-panel,
+    .map-container,
+    .btn-close-plan,
+    .maplibregl-map {
+      display: none !important;
+    }
+  
+    /* Show print-only elements */
+    .print-only {
+      display: block !important;
+    }
+  
+    /* Page setup */
+    @page {
+      size: letter;
+      margin: 0.75in;
+    }
+  
+    html, body {
+      font-size: 11pt;
+      line-height: 1.4;
+      color: #000 !important;
+      background: #fff !important;
+    }
+  
+    /* Plan summary container */
+    .plan-summary {
+      position: static !important;
+      width: 100% !important;
+      max-width: none !important;
+      height: auto !important;
+      overflow: visible !important;
+      background: #fff !important;
+      padding: 0 !important;
+      margin: 0 !important;
+      box-shadow: none !important;
+    }
+  
+    .plan-summary-content {
+      padding: 0 !important;
+    }
+  
+    /* Typography for print */
+    .plan-header h1 {
+      font-size: 18pt !important;
+      color: #000 !important;
+      margin-bottom: 4pt !important;
+    }
+  
+    .plan-header p {
+      font-size: 10pt !important;
+      color: #444 !important;
+    }
+  
+    .plan-section {
+      break-inside: avoid;
+      page-break-inside: avoid;
+      margin-bottom: 16pt !important;
+      padding: 12pt !important;
+      border: 1px solid #ddd !important;
+      border-radius: 4pt !important;
+      background: #fff !important;
+    }
+  
+    .section-title {
+      font-size: 12pt !important;
+      font-weight: 600 !important;
+      color: #000 !important;
+      margin-bottom: 8pt !important;
+      padding-bottom: 4pt !important;
+      border-bottom: 1px solid #ddd !important;
+    }
+  
+    /* Route info */
+    .route-highlight {
+      background: #f5f5f5 !important;
+      border-left: 3px solid #22c55e !important;
+    }
+  
+    /* Checklist */
+    .checklist-item {
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+  
+    .checklist-checkbox {
+      width: 12pt !important;
+      height: 12pt !important;
+      border: 1.5pt solid #000 !important;
+      border-radius: 2pt !important;
+      background: #fff !important;
+    }
+  
+    /* Explanations */
+    .explanation-section {
+      background: #f9f9f9 !important;
+      border: 1px solid #ddd !important;
+    }
+  
+    .explanation-section--positives {
+      border-left: 3px solid #22c55e !important;
+    }
+  
+    .explanation-section--cautions {
+      border-left: 3px solid #f59e0b !important;
+    }
+  
+    /* Disclaimer */
+    .plan-disclaimer {
+      margin-top: 24pt !important;
+      padding: 12pt !important;
+      border: 2px solid #000 !important;
+      background: #fff !important;
+      font-size: 9pt !important;
+    }
+  
+    /* Footer for print */
+    .print-footer {
+      margin-top: 24pt;
+      padding-top: 12pt;
+      border-top: 1px solid #ddd;
+      font-size: 8pt;
+      color: #666;
+      text-align: center;
+    }
+  }
