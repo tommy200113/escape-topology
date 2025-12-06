@@ -32,6 +32,7 @@
   
   // Track created markers
   const markers = ref(new Map<string, Marker>());
+  // @ts-ignore - MapLibre Popup type recursion issue
   const popups = ref<Map<string, Popup>>(new Map());
   
   /**
@@ -198,7 +199,7 @@
     const map = props.map;
     if (!map) return;
     
-    for (const [shelterId, marker] of markers.value.entries()) {
+    for (const [_shelterId, marker] of markers.value.entries()) {
       if (isVisible.value) {
         marker.addTo(map);
       } else {
