@@ -31,7 +31,7 @@
   const isVisible = computed(() => props.visible ?? true);
   
   // Track created markers
-  const markers = ref<Map<string, Marker>>(new Map());
+  const markers = ref(new Map<string, Marker>());
   const popups = ref<Map<string, Popup>>(new Map());
   
   /**

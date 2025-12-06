@@ -222,7 +222,7 @@ function initializeTerrain(mapInstance: maplibregl.Map): void {
         type: 'raster-dem',
         url: TERRAIN_CONFIG.maptiler.url,
         tileSize: TERRAIN_CONFIG.maptiler.tileSize,
-        maxzoom: TERRAIN_CONFIG.maptiler.maxZoom,
+        maxzoom: 12,
       });
       
       mapInstance.setTerrain({
@@ -252,7 +252,7 @@ function initializeTerrain(mapInstance: maplibregl.Map): void {
       tiles: TERRAIN_CONFIG.terrarium.tiles,
       tileSize: TERRAIN_CONFIG.terrarium.tileSize,
       encoding: TERRAIN_CONFIG.terrarium.encoding,
-      maxzoom: TERRAIN_CONFIG.terrarium.maxZoom,
+      maxzoom: TERRAIN_CONFIG.terrarium.maxzoom,
     });
     
     mapInstance.setTerrain({
@@ -290,7 +290,7 @@ function handleTerrainError(mapInstance: maplibregl.Map): void {
       tiles: TERRAIN_CONFIG.terrarium.tiles,
       tileSize: TERRAIN_CONFIG.terrarium.tileSize,
       encoding: TERRAIN_CONFIG.terrarium.encoding,
-      maxzoom: TERRAIN_CONFIG.terrarium.maxZoom,
+      maxzoom: TERRAIN_CONFIG.terrarium.maxzoom,
     });
     
     mapInstance.setTerrain({

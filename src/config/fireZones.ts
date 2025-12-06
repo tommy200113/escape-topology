@@ -16,6 +16,7 @@
 import type { 
     ScenarioId, 
     FireZone, 
+    FireZoneLevel, 
     ScenarioFireZones, 
     FireZoneFeatureCollection 
   } from '../types';
