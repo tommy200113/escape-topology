@@ -31,9 +31,8 @@
   const isVisible = computed(() => props.visible ?? true);
   
   // Track created markers
-  const markers = ref(new Map<string, Marker>());
-  // @ts-ignore - MapLibre Popup type recursion issue
-  const popups = ref<Map<string, Popup>>(new Map());
+  const markers = ref<any>(new Map());
+  const popups = ref<any>(new Map());
   
   /**
    * Create SVG marker element for a shelter
